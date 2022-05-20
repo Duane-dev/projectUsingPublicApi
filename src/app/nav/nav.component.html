@@ -1,0 +1,7 @@
+<div class="nav">
+    <h2 (click)="fetchDataAgain('top_rated')">Top Rated</h2>
+    <h2 (click)="fetchDataAgain('now_playing')">Now Playing</h2>
+    <h2 (click)="fetchDataAgain('popular')">Popular</h2>
+    <h2 (click)="fetchDataAgain('upcoming')">Upcoming</h2>
+</div>
+<app-results [movies]="movies" ></app-results>
