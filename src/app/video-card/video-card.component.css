@@ -1,9 +1,12 @@
 .videoCard {
     color: white;
     width: 500px;
-    height: 400px;
+    height: 500px;
     padding: 20px;
     transition: transform 100ms;
+}
+h2{
+    color: white;
 }
 
 .videoCard:hover {
@@ -13,6 +16,6 @@
 .videoCard > img {
     height: 300px;
     object-fit: contain;
-    width: 500px;
+    width: 400px;
 }
 

@@ -17,9 +17,15 @@
     opacity: 0.7;
     transition: transform 50ms ease-out;
     font-weight: 500;
+    color: white;
 }
 
 .nav > h2:hover {
     opacity: 1;
     transform: scale(1.2);
+}
+.genres{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
 }

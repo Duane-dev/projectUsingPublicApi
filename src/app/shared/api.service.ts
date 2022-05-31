@@ -40,6 +40,22 @@ export class ApiService {
       return res;
     }))
   }
- 
+  getGenres(){
+    return this.http.get<any>(this.baseUrl+"genre/movie/list?api_key="+this.apiKey+"&language=en-US")
+    .pipe(map((res:any)=>{
+      return res;
+    }))
+  }
+    searchMovies(data:any){
+      return this.http.get<any>(this.baseUrl+"search/movie?api_key="+this.apiKey+"&language=en-US&page=1&include_adult=false&query="+data)
+      .pipe(map((res:any)=>{
+        return res;
+      }))
+  
+
+  }
 }
+ 
+
+
  

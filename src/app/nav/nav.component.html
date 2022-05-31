@@ -3,5 +3,26 @@
     <h2 (click)="fetchDataAgain('now_playing')">Now Playing</h2>
     <h2 (click)="fetchDataAgain('popular')">Popular</h2>
     <h2 (click)="fetchDataAgain('upcoming')">Upcoming</h2>
+    <h2 (click)="showModal()">Genres</h2>
+ 
+  <form nz-form [formGroup]="searchForm" class="login-form" >
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Seach Movies!">
+        <nz-input-group nzPrefixIcon="search">
+          <input type="text" nz-input formControlName="search" placeholder="Search" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+  <button (click)="searchAllMovies()" nz-button [nzType]="'primary'">Search</button>
 </div>
+   
 <app-results [movies]="movies" ></app-results>
+
+<nz-modal [(nzVisible)]="isVisible"(nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <ng-container  *nzModalContent>
+     <div class="genres" *ngFor="let genre of genres">
+        <a class="grid-item">{{genre.name}}</a>
+     </div>
+    </ng-container>
+  </nz-modal>
