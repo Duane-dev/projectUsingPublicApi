@@ -56,6 +56,7 @@ export class NavComponent implements OnInit {
     this.api.getMovies(this.filter)
     .subscribe(res=>{
       this.movies = res.results
+      console.log(this.movies)
     })
   }
   searchAllMovies(){
